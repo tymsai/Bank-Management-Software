@@ -16,15 +16,15 @@ public:
 };
 void bank::open_account()
 {
-    cout<<"Enter your full name ::";
+    cout<<"Enter your Full name :: ";
     cin.ignore();
     cin.getline(name,100);
-    cout<<"Enter your addess ::";
+    cout<<"Enter your residential addess :: ";
     cin.ignore();
     cin.getline(add,100);
-    cout<<"what type of account you want to open saving (s) or current (c)";
+    cout<<"What type of account you want to open savings (s) or current (c)";
     cin>>y;
-    cout<<"Enter amount for deposite ::";
+    cout<<"Enter the amount of money to deposite in the account ::";
     cin>>balance;
     cout<<"Your account is created ";
 
@@ -32,26 +32,27 @@ void bank::open_account()
 void bank::deposite_money()
 {
     int a ;
-    cout<<"Enter how much money you want to deposit::";
+    cout<<"How much money do you want to deposit :: ";
     cin>>a;
     balance+=a;
-    cout<<"Your total deposit amount\n";
+    cout<<"Your net deposit amount is \n";
 }
 void bank::display_account()
 {
-    cout<<"Enter the name ::"<<name<<endl;
-    cout<<"Enterened your addees ::"<<add<<endl;
-    cout<<"Type of account that you open ::"<<y<<endl;
-    cout<<"Amount you deposite ::"<<balance<<endl;
+    cout<<"Full name :: "<<name<<endl;
+    cout<<"Residential address :: "<<add<<endl;
+    cout<<"Account type :: "<<y<<endl;
+    cout<<"Net amount in account :: "<<balance<<endl;
 
 }
 void bank::withdraw_money()
 {
-    cout<<"withdeaw ::";
-    cout<<"Enter your amount for withdrawing ";
+    cout<<"Withdrew Process \n ::";
+    cout<<"Enter the amount of money for withdrawl ";
     cin>>amount;
     balance=balance-amount;
-    cout<<"Now your total amount is left ::"<<balance;
+    cout<<"Withdrawing......"
+    cout<<"Current net balance ::"<<balance;
 }
 
 int main()
@@ -60,42 +61,42 @@ int main()
     bank obj;
     do
     {
-    cout<<"01)open account \n";
-    cout<<"02)deposite money \n";
-    cout<<"03)withdeaw money \n";
-    cout<<"04)display account\n";
-    cout<<"05)Exit\n";
-    cout<<"please sir, select the option from above ";
+    cout<<" 01) Open account \n";
+    cout<<" 02) Deposite money \n";
+    cout<<" 03) Withdeaw money \n";
+    cout<<" 04) Display account\n";
+    cout<<" 05) Exit\n";
+    cout<<"Select the respective S.No. ";
     cin>>ch;
 
     switch(ch)
     {
-        case 1:"01)open account \n";
+        case 1:" 01) Open account \n";
         obj.open_account ();
         break;
-        case 2:"02)deposite money \n";
+        case 2:" 02) Deposite money \n";
         obj.deposite_money();
         break;
-        case 3:"03)withdeaw money \n";
+        case 3:" 03) Withdeaw money \n";
         obj.withdraw_money ();
         break;
-        case 4:"04)display account\n";
+        case 4:" 04) Display account\n";
         obj.display_account();
         break;
         case 5:
             if(ch==5)
             {
-               cout<< "exit";
+               cout<< " Exit ";
             }
         default:
-            cout<<"This is not exit please try again ";
+            cout<<" This is not exit please try again ";
 
     }
-    cout<<"\n do you want to select next step then please press::y\n";
-    cout<<"if you want to exit then please press:: N ";
+    cout<<"\n If you want to proceed in bank press :: Y\n";
+    cout<<"\n If you want to Exit press :: N ";
     x=getch();
     if(x=='n' || x=='N')
-    cout<<"exit";
+    cout<<"  E X I T  ";
     }
     while (x=='y' || x=='Y');
 
