@@ -57,6 +57,12 @@ void bank::withdraw_money()
 
 int main()
 {
+    string sec;
+    string pass = "1234Abc*";
+    cout<<"Enter the password to continue to account settings\n";
+    getline(cin,sec);
+    if(sec==pass)
+    {
     int ch,x,n;
     bank obj;
     do
@@ -99,7 +105,9 @@ int main()
     cout<<"  E X I T  ";
     }
     while (x=='y' || x=='Y');
-
+    }
+    else
+    cout<<"Incorrect Password";
 
  getch();
  return 0;
