@@ -5,5 +5,5 @@ Recent updates : <br/>
 <br/>
 2.Added password Protection  -  May 2021 <br/>
 PASSWORD to use features : 1234Abc*  (case sensitive) <br/>
-dos Based Graphical software<br/>
+dos Based software<br/>
 Made using C++ only.
