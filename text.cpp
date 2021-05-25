@@ -57,6 +57,7 @@ void bank::withdraw_money()
 
 int main()
 {
+    system("color 0a");
     string sec;
     string pass = "1234Abc*";
     cout<<"Enter the password to continue to account settings\n";
